@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(Assets/fondo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    
+    background-color: rgba(237, 237, 233, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.input-section,
+.output-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 16px;
+    resize: none;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.primary-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.secondary-btn {
+    background-color: #6c757d;
+    color: white;
+}
+
+#copy-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.button {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: rgb(193, 163, 98);
+    border: 2px solid rgb(193, 163, 98);
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: rgb(193, 163, 98);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button:hover::before {
+    scale: 3;
+}
+
+.button:hover {
+    color: #212121;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+}
+
+.button:active {
+    scale: 1;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+}
+
+
+.social-links,.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-btn {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.3);
+    background: white;
+    margin: 5px;
+    transition: 0.3s;
+    justify-content: center;
+}
+
+.social-btn svg {
+    height: 24px;
+    width: 24px;
+}  
+
+
+.social-btn:hover {
+    width: 80px;
+    border-radius: 5px;
+}  
+
+.social-btn:hover span {
+    padding: 2px;
+    width: 70px;
+}  
+
+#linkedin svg {
+    fill: #0e76a8;
+}  
+
+#github {
+    fill: #333;
+}  
+
+
+/* Media queries para tabletas */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    header h1, footer h1 {
+        font-size: 1.5rem;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    textarea {
+        height: 120px;
+    }
+}
+
+/* Media queries para teléfonos móviles */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    header h1, footer h1 {
+        font-size: 1.25rem;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .options {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .output-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
